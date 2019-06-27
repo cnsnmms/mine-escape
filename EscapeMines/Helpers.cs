@@ -35,7 +35,7 @@ namespace EscapeMines
                 throw new Exception("Board size is wrong.");
             }
 
-            if (Regex.IsMatch(lines[1], @"([1-9]\d*,[1-9]\d*)*"))
+            if (Regex.IsMatch(lines[1], @"([0-9]\d*,[0-9]\d*)*"))
             {
                 var coordinates = lines[1].Split();
                 foreach (var item in coordinates)
@@ -73,7 +73,6 @@ namespace EscapeMines
             {
                 throw new Exception("Turtle data is wrong.");
             }
-
 
             for (int i = 4; i < lines.Length; i++)
             {
